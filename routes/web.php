@@ -12,13 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('crcm.pages.profile');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/test', function () {
-    return view('test');
+Route::get('/profile', function () {
+    return view('crcm.pages.profile');
+});
+
+Route::get('/clan', function () {
+    return view('crcm.pages.clan');
+});
+
+Route::get('/chest', function () {
+    return view('crcm.pages.chest');
+});
+
+Route::get('/settings', function () {
+    return view('crcm.pages.settings');
 });
